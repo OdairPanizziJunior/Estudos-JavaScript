@@ -19,8 +19,25 @@ body {
 
 h1{
     color: var(--color2);
+    text-align: center;
 }
 
 p{
     color: var(--color3);
+}
+
+#idade{
+    width: 30px;
+    height: 25px;
+}
+
+#nome{
+    width: 200px;
+    height: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
