@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: rgb(27, 3, 3);
+    --color2: rgb(114, 78, 1);
+    --color3: rgb(29, 1, 128);
+    --color4: rgba(221, 221, 233, 0.377);
+}
+
+body {
+    background-color: var(--color4);
+    color: var(--color1);
+    font: normal 20pt Arial;
+}
+
+h1{
+    color: var(--color2);
+}
+
+p{
+    color: var(--color3);
+}
