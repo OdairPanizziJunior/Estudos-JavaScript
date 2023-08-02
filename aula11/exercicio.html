@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<style>
+    h1{
+        color: white;
+    }
+    h3{
+        color: white;
+    }
+    div#bloco{
+        margin: 0 auto;
+        color: white;
+        text-align: center;
+        background: rgb(228, 218, 216);
+        margin-top: 30px;
+        height: 180px;
+        width: 500px;
+        padding: 30px;
+    }
+  
+</style>
+
+<body>
+    
+    <div align="center" id="bloco">
+        <h1>Brasileiro ou Estrangeiro</h1>
+        <h3>digitar em letras MAIÚSCULAS</h3>
+        Nacionalidade: <input type="text" name="txtnac" id="txtnac">
+        <input type="button" value="verificar" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+    
+    <script>
+        
+        function calcular(){
+            var txtnac = window.document.getElementById('txtnac')
+            var nac = txtnac.value
+           // res.innerHTML = `<p><strong>${nac}<strong></p>`
+            
+                if(nac == 'EUA'){
+                    res.innerHTML = `<p>ESTRANGEIRO</p>`
+                }
+
+                else if(nac == 'BRASIL'){
+                    res.innerHTML = `<p>BRASILEIRO</p>`
+                }
+                
+                else{
+                    res.innerHTML = `<p>Você digitou "${nac}", porém somente são aceitos os seguintes termos:<br>
+                        <strong> BRASIL ou EUA </strong>   </p>`
+                    
+                }
+
+            }
+
+    </script>
+
+</body>
+</html>

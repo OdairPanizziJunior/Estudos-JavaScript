@@ -1,0 +1,244 @@
+JAVASCRIPT = Clientside
+
+HTML = conteúdo
+CSS = Design
+JS = Interações
+
+JAVA não tem nada a ver
+
+
+Number(n) -> conversão automática para qualquer tipo INT
+Number.pasrseFloat(n) -> força pra Float
+Number.parseInt(n) -> força para Int
+
+String(n) -> conversão para String
+n.toString() -> conversão para String
+
+
+Comandos em JS:
+
+<script>	
+	window.alert       // este comando emite uma mensagem!
+	window.confirm     // este comando faz uma pergunta de confirmação
+	window.prompt      // este comando faz um pergunta de resposta!')
+</script>
+
+
+Variáveis:
+
+Como Criar variáveis, Ex: var nome ou let nome
+
+para uma variável receber um valor usamos:
+	var nome = Gustavo       // desta forma criamos uma variável e ao mesmo tempo demos uma valor a ela
+	nome = Gustavo           //desta forma apenas damos um valor para a variável  que ja foi criada
+
+-> Regras das variáveis:
+	Podem começar com: Letra, $ ou _
+	Não podem começar com números 
+	É possível usar letras ou números
+	É possível usar  acentos e símbolos 
+	Não pode conter espaços 
+	Não pode usar palavras que são comandos
+
+Dicas para nomes das variáveis: 
+Maiúsculas e Minúsculas fazem a diferença!
+Tente escolher nomes coerentes a função da variável. Ex: Variável que vai armazenar a idade, coloca o nome dela de “idade”
+Evite se tornar um “Programador Alfabeto” ou um “Programador Numérico”. Ex: Não usar os nomes das variáveis como “a”, “b”, “c”, etc; ou “a1”, “a2”, “a3”, etc.
+
+Tipos de Dados das Variáveis: (Tipos Primitivos, lembrando que existem muitas outras!)
+
+Numbers;
+Strings;
+Boolean;
+
+// Numbers: 1; -2; 4.5; 6.555 -> Basicamente números
+// Strings: Maria, Google, Joao, pedreiro, (seu CPF) -> Basicamente cadeia de caracteres
+// Boolean: True; False
+
+________________________________________________________________________
+
+Transformando uma string em um number
+
+	var n1 = Number.parseInt (window.prompt ('digite aqui um numero!'))
+	var numero1 = Number.parseFloat (window.prompt ('digite aqui um numero!'))
+	var numero1 = Number (window.prompt ('digite aqui um numero!’))
+
+Mas qual é a diferença entra “Number.parseInt”, “Number.parseFloat” e Number?
+
+	// Number.parseInt: Numero Inteiro
+	// Number.parseFloat: Numero com virgula
+	// Number: Js vai decidir qual é
+
+________________________________________________________________________
+
+Transformando um number em uma string
+
+	window.alert ('a soma dos numeros é: ' + soma.toString())   // Jeito mais antigo
+	ou 
+	window.alert ('a soma dos numeros é: ' + String(soma))      // Jeito mais simples
+________________________________________________________________________
+
+Formatando Strings:
+
+	var teste = 'java script’
+
+	‘eu estou aprendendo’ + teste
+	`eu estou aprendendo ${teste}` -> não esqueça de usar crase!
+	teste.length                    // conta quantos caracteres tem na variável  
+	teste.toUpperCase        	// coloca tudo em caixa alta
+	teste.toLowerCase        	// coloca tudo em minúsculo 
+
+________________________________________________________________________
+
+Formatando números:
+
+	Var n1 = 1543.5
+
+	n1.toFixed(2)                                                       // Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses)
+	n1.toLocaleString( ‘pt-BR’,{style: ‘currecy’, currency: ‘BRL’} )    // Coloca o R$ na frente do numero (pode trocar entre outras                                                                                                                 moedas)
+	n1.replace (‘.’, ‘,’)  
+
+Operadores:
+
+Tipos de operadores que vamos estudar:
+
+Aritméticos
+Atribuição
+relacionais
+lógicos
+ternarios
+
+________________________________________________________________________
+
+
+Operadores Aritméticos:
+	+	// Somar   
+	-	// Subtrair
+	*	// Multiplicação 
+	/	// divisão
+	%	// Resto de uma divisão 
+	**	// Potencia do primeiro numero elevado ao segundo
+
+	5 + 3   = 8
+	5 - 3    = 2
+	5 * 3    = 15
+	5 / 3    = 1,6
+	5 % 3  =  2
+	5 ** 3   = 125
+
+Precedencia dos operadores↓
+
+	( ) 
+	**
+	*   /   %
+ 	+  -
+
+Auto Atribuições:                                                                               
+
+	var  n = 3                                                                                                
+
+	n = n + 4	//ele vai somar ele mesmo a 4				|	
+	n = n - 5	//ele vai pegar ele mesmo e subtrair 5			|	
+	n = n * 4	//ele vai pegar ele mesmo e multiplicar por 4		|	
+	n = n / 2 	//ele vai pegar ele mesmo e dividir por 2		|	
+	n = n **2	//ele vai pegar ele mesmo e elevar a 2 potência		|	
+	n = n % 5	//ele vai pegar ele mesmo, dividir por 5 e dar o resto	|	
+
+Forma Simplificada:
+
+	var n = 3
+
+	n +=  4 
+	n -=  2
+	n *=  5
+	n /=  2
+	n **= 2
+	n %=  5
+
+
+outra simplificação:
+
+	n++	// é a mesma coisa que n = n + 1 ou n += 1
+	n—	//é a mesma coisa que n = n - 1 ou n -= 1
+	++n	// ele vai somar antes
+	—n	// ele vai diminuir antes    
+
+Operadores Relacionais:
+
+	> maior
+	< menor
+	>= maior ou igual
+	<= menor ou igual
+	== igual
+	!n diferente
+	
+	*Todos os resultados para expressões são valores Boleanos (TRUE or FALSE)
+
+
+	5 == 5 		TRUE
+	5 == '5'	TRUE
+	5 === '5'	FALSE (=== é idêntico?)
+	5 === 5		TRUE
+
+
+Operadores Lógicos:
+
+	Ordem de execução:
+	1° !	negação
+	2° &&	conjunção ou E
+	3° || 	disjunção ou OU
+
+
+Ordem de execussão em uma exmpressão: 
+	
+	1°	operadores atitiméticos
+	2°	operadores relacionais
+	3°	operadores lógicos
+
+Operador Ternário:
+
+	Como se fosse um IF, Exemplo:
+
+	var media = 5.5
+
+	media > 7?'Aprovado':'Reprovado'
+
+	(se media foi maior que 7 escreve Aprovado, se não Reprovado)
+
+DOM - Document Object Model
+
+	Facilitador para dar acesso aos elementos dentro do JavaScript
+	Estruturar em árvore DOM
+
+	Técnicas para acessar elementos dentro do JS usando o DOM
+	- TagName
+	- ID
+	- Name
+	- ClassName
+	- querySelector (aula 09)
+
+
+Eventos de Mouse:
+
+	MOUSEENTER 	mouse entrou na div
+	MOUSEMOVE 	mouse esta se movendo dentro da DIV
+	MOUSEDOWN 	momento em que clicar e segurar o botão
+	MOUSEUP 	momento em que solt ao botão 
+	CLICK		momento em que clica apenas
+	MOUSEOUt	mouse saindo da div
+
+Função:
+
+	Conjunto de linhas que serão executadas somente quando o evento ocorrer
+
+
+Condições:
+
+	Se não tem ELSE é condição simples.
+
+	- IF TRUE faz alguam coisa, ELSE faça outra
+
+Pluggins:
+
+	Node Exec 
+	LiveServer
