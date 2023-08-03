@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        
-     
         <h1>Script de Saudação</h1>
-            <div class="container">
-            <label for="nome">Digite seu nome:</label>
-            <input type="text" id="nome">
-            <label for="idade">Digite sua idade:</label>
-            <input type="text" id="idade">
+        <div class="container">
+            <div>
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" id="nome">
+            </div>
+            <div>
+                <label for="idade">Digite sua idade:</label>
+                <input type="number" id="idade">
+            </div>
+            <button class="botao-size botao-info" onclick="saudar()">Saudar</button>
             <p id="mensagem"></p>
             <p id="info"></p>
         </div>
-        <button onclick="saudar()">Saudar</button>
+        
+        <!-- Modal, o alerta ao clicar em +info -->
+        <div id="custom-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p>Por favor, digite seu nome e idade antes de saudar</p>
+          </div>
+        </div>
+
+ 
+        
         <script src="script.js"></script>
 
     </body>
