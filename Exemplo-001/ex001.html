@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <h1>Script de Saudação</h1>
         <div class="container">
+            <h1>Script de Saudação</h1>
             <div>
                 <label for="nome">Digite seu nome:</label>
                 <input type="text" id="nome">
@@ -18,9 +18,10 @@
                 <input type="number" id="idade">
             </div>
             <button class="botao-size botao-info" onclick="saudar()">Saudar</button>
+        </div>
+        <br>
             <p id="mensagem"></p>
             <p id="info"></p>
-        </div>
         
         <!-- Modal, o alerta ao clicar em +info -->
         <div id="custom-modal" class="modal">
@@ -29,10 +30,6 @@
             <p>Por favor, digite seu nome e idade antes de saudar</p>
           </div>
         </div>
-
- 
-        
         <script src="script.js"></script>
-
     </body>
 </html>
