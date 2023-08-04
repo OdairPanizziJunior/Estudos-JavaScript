@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font: normal 20pt Arial;
+}
+
+input{
+    width: 50px;
+}
+
+button{
+    width: 50px;
+}
