@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            background: rgb(168, 168, 221);
+            color: white;
+            font: normal 18pt Arial;
+        }
+        p{
+            color: yellow;
+        }
+
+        .explain-title{
+            color: black;
+        }
+
+        .explain-text{
+            color: rgb(48, 46, 46);
+        }
+    </style>
+
+</head>
+<body>
+    <h1>DOM</h1>
+    <p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM </strong>em JavaScript.</p>
+    <div id='msg'>Texto Original</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var p2 = window.document.getElementsByTagName('p')[1];
+        var p3 = window.document.getElementsByTagName('p')[2];
+        p1.style.color = 'blue';
+        p2.style.color = 'green';
+        p3.style.color = 'black';
+
+       var d1 = window.document.getElementById('msg');
+        d1.style.background= 'red';
+        d1.innerText = 'Mudando o conteúdo';
+
+        var d1 = window.document.querySelector('div#msg');
+        d1.style.color = 'blue';
+        d1.style.background = 'black';
+   </script>
+
+   <h1 class="explain-title">O que o Script está fazendo?</h1>
+
+   <p class="explain-text">Está editando o simples HTML abaixo (que é o arquivo do atual).</p>
+
+   &nbsp;&nbsp;&nbsp;&lt;h1&gt;DOM&lt;/h1&gt; <br><br>
+   &nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt;ocument &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;M&lt;/strong&gt;odel&lt;/p&gt;<br><br>
+   &nbsp;&nbsp;&nbsp;&lt;p&gt;Aqui vai o resultado&lt;/p&gt;<br><br>
+   &nbsp;&nbsp;&nbsp;&lt;p&gt;Aprendendo a usar o &lt;strong&gt;DOM&lt;/strong&gt; em JavaScript.&lt;/p&gt;<br><br>
+   &nbsp;&nbsp;&nbsp;&lt;div id="msg"&gt;Texto Original&lt;/div&gt;<br><br>
+
+   <p class="explain-text">O arquivo possuí uma folha de estilos aplicando a cor amarela para todos os elementos &lt;p&gt;.</p>
+   <pre>
+    p{
+        color: yellow;
+    }
+   </pre>
+   
+    <p class="explain-text">Primeiramente, declarando 3 variáveis (p1, p2 e p3) e armazenando nelas, o conteúdo dos elementos capturados pelo nome da TAG.</p>
+        
+    <pre>
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var p2 = window.document.getElementsByTagName('p')[1];
+        var p3 = window.document.getElementsByTagName('p')[2];
+    </pre>
+
+    <p class="explain-text">O conteúdo de cada variável, agora recebe um estilo de cor diferente.</p>
+
+    <pre>
+        p1.style.color = 'blue';
+        p2.style.color = 'green';
+        p3.style.color = 'black';
+    </pre>
+
+    <p class="explain-text">O conteúdo da TAG &lt;div&gt;, que possui um id="msg" agora é armazenado na variável (d1) usando a função getElementById. Também é aplicado um estilo de cor diferente no background "vermelho" e seu texto é alterado para 'Mudando o conteúdo', usando a função innerText.</p>
+    
+    <pre>
+        var d1 = window.document.getElementById('msg');
+        d1.style.background= 'red';
+        d1.innerText = 'Mudando o conteúdo';
+    </pre>
+    
+    <p class="explain-text">Mas agora o conteúdo busca o primeiro elemento &lt;div&gt; que possui o atributo id com o valor 'msg'. Altera a cor do texto para azul e a cor de fundo para preto.</p>
+
+    <pre>
+        var d1 = window.document.querySelector('div#msg');
+        d1.style.color = 'blue';
+        d1.style.background = 'black';
+   </pre>
+
+</body>
+</html>
