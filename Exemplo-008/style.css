@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor1: black;
+    --cor2: white;
+    --cor3: gray;
+
+}
+/* ESTILOS DO MODAL DO ALERTA */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /*efeito da tela escurecida*/
+    }
+    
+    .modal-content {
+    background-color: var(--cor1);  
+    color: var(--cor2);  
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--cor3);
+    width: 300px;
+    border-radius: 5px;
+    }
+    
+    .close-btn {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--cor2);
+    margin-left: 5px;
+    }
+    
+    .close-btn:hover {
+    color: var(--cor3);
+    }
+    
+
+.calculator{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#display{
+    height: 75px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    text-align: end;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 300px;
+    height: 300px;
+}
+
+button{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.end-buttons{
+    display: flex;
+}
+
+.calculator .cequal{
+    width: 150px;
+    height: 75px;
+}
+
+
