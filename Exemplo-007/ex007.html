@@ -38,13 +38,19 @@
     </div>
     <script>
         function somar(){
-            var tn1 = window.document.getElementById('txtn1')
-            var tn2 = window.document.querySelector('input#txtn2')
-            var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`         
+            var tn1 = window.document.getElementById('txtn1');
+            //outra maneira de fazer
+            // var tn2 = window.document.querySelector('input#txtn2');
+            var tn2 = window.document.getElementById('txtn2'); //nova maneira
+            var res = window.document.getElementById('res');
+            
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            // var s = n1 + n2; outra maneira de fazer
+            var s2 = Number(tn1.value) + Number(tn2.value);
+            //outra maneira de fazer
+            // res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+            res.innerHTML = `A soma entre ${n1} e ${n2} é: ` + s2;         
         }
     </script>
 
