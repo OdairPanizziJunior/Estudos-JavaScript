@@ -1,7 +1,7 @@
 let displayValue = "";
 
-function appendToDisplay(value) {
-    displayValue += value;
+function appendToDisplay(value) { //função appendToDisplay
+    displayValue += value; //displayValue recebe ele memso + o value, isso é o que significa +=
     updateDisplay();
 }
 
